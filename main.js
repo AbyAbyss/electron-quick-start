@@ -8,6 +8,9 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
+      nodeIntegration: true,
+      webviewTag: true,
+      nativeWindowOpen: true,
       preload: path.join(__dirname, 'preload.js')
     }
   })
