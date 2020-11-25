@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
     <title>Hello World!</title>
   </head>
   <body>
     <div style="display: grid;grid-template-columns: 1fr 1fr;">
       <div>
-        <webview src="https://lise-henry.github.io/books/trpl2.pdf" style="height: 100vh;"></webview> 
+        <webview src="http://www.africau.edu/images/default/sample.pdf" style="height: 50vh;"></webview> 
       </div>
       <div>
-        <webview src="https://lise-henry.github.io/books/trpl2.pdf" partition='some-partition' style="height: 100vh;"></webview> 
+        <webview src="http://www.africau.edu/images/default/sample.pdf" partition='some-partition' style="height: 50vh;"></webview> 
+      </div>
+      <div style="grid-column: 3/1;">
+        <webview src="http://www.africau.edu/images/default/sample.pdf" partition='persist:somepartition' style="height: 50vh;"></webview> 
       </div>
     </div>
     <!-- You can also require other files to run in this process -->
